@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FND22 鈴木巧真の成果物</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="typing.js" defer></script>
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <div id="home">
+    <nav class="title">
+      <h1>JavaScriptで<span style="color: orange; font-weight: bold;">動きのある</span>ウェブサイトを作る！20日間の挑戦</h1>
+      <h2 class="pName">FND22 2023.12.11 鈴木 巧真</h2>
+      <a href="#aboutme" class="btn">Meet Me!</a>
+    </nav>
+  </div>
+  <div class="main">
+    <div class="header">
+      <nav>
+        <ul>
+          <li><a href="#aboutme">"About Me"</a></li>
+          <li><a href="#goals">"Goals"</a></li>
+          <li><a href="#achievements">"Achievements"</a></li>
+          <li><a href="#nextsteps">"Next Steps"</a></li>
+        </ul>
+      </nav>
+      </nav>
+    </div>
+
+    <div id="aboutme">
+      <nav class="blank">
+        <h3> </h3>
+      </nav>
+      <nav class="separator">
+        <div class="takuma">
+          <img id="takuma" src="images/image3.png" alt="takuma">
+          <h2 id="backtitle">The Path to Becoming<br><span class="mgl">a Programmer</span></h2>
+        </div>
+        <!-- 自己紹介スライド -->
+        <div class="slide-wrapper">
+          <div id="slide" class="slide">
+            <div class="slide-flex">
+              <h3>職場紹介</h3>
+              <img class="slide-img" src="images/職場紹介.jpg" alt="">
+              <p class="content">元町工場 組立製造技術部<br>普段は組立ラインの設備開発や評価をしています</p>
+            </div>
+            <div class="slide-flex">
+              <h3>プログラミングとの出会い</h3>
+              <img class="slide-img" src="images/donkycar.gif" alt="">
+              <p class="content">2021年、ト技会の企画でpythonを学びレースに参加<br>自分で考えた条件式で、モノが走る・曲がることに感動</p>
+              <h5 style="font-weight: lighter;">※駆動プログラムは支給品</h5>
+            </div>
+            <div class="slide-flex">
+              <h3>プログラミング学習の旅路</h3>
+              <img class="slide-img" src="images/pythonFail.png" alt="">
+              <p class="content">業務活用しようとするも成果と結びつかず・・・一旦挫折<br>PowerPlatformを昨年知り、ローコードの道へ</p>
+            </div>
+            <div class="slide-flex">
+              <h3>職場で取り組んだDX</h3>
+              <img class="slide-img" src="images/業務改善.png" alt="">
+              <p class="content">自業務のかたわらローコードアプリ制作し業務改善に成功<br>webアプリ制作に興味が再燃、今回プログラミングに再挑戦！</p>
+            </div>
+          </div>
+          <!-- ボタン -->
+          <span id="prev" class="prev"></span>
+          <span id="next" class="next"></span>
+          <!-- インジケータ -->
+          <ul class="indicator" id="indicator">
+            <li class="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+            <li class="list"></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+
+    <div id="goals">
+      <nav class="blank">
+        <h3> </h3>
+      </nav>
+      <div class="images">
+        <div class="image">
+          <img src="images/pythonFail.png" alt="">
+          <span>Programming</span>
+        </div>
+        <div class="image">
+          <img src="images/pythonFail.png" alt="">
+          <span>Products</span>
+        </div>
+        <div class="image">
+          <img src="images/pythonFail.png" alt="">
+          <span>Communication</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="achievements">
+      <nav class="blank">
+        <h3> </h3>
+      </nav>
+      <div class="typing-title">
+        <h2 style="font-weight: bold;">Coding Sprint</h2>
+      </div>
+      <div class="game">
+        <div class="gameArea">
+          <p id="typingWord">
+            クリックして開始
+          </p>
+          <p id="wordMeaning">
+          </p> 
+          <p id="info">
+            入力文字数：<span id="wordCount">0</span>
+            タイプミス：<span id="typeMiss">0</span>
+            残り時間：<span id="timeLeft">0</span>
+            正確性：<span id="accuracy">0</span>
+            WPM：<span id="typeSpeed">0</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="nextsteps">
+      <nav class="blank">
+        <h3> </h3>
+      </nav>
+      <h3>今後に向けて</h3>
+    </div>
+  </div>
+</body>
+
+
+</html>
