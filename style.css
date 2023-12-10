@@ -13,6 +13,7 @@
 
 body {
   background-image: url(images/backImge.jpg);
+  object-fit: cover;
 }
 
 /* #header */
@@ -113,11 +114,13 @@ h1 {
   width: 37vw;
 }
 #takuma {
-  max-height: 100%;
+  max-height: 95%;
   max-width: 100%;
-  padding-bottom: 7vh;
+  /* padding-bottom: 7vh; */
   position: absolute;
+  bottom: -4vh;
   z-index: 5;
+  scale: 0.95;
 }
 #backtitle {
   position: absolute;
@@ -247,6 +250,10 @@ h1 {
   margin: 0;
 }
 
+h5 {
+  font-size: 2vh;
+}
+
 .slide-img {
   margin-top: 11vh;
   height: 48vh;
@@ -296,50 +303,88 @@ h1 {
   height: 100vh;
 }
 
+.flexgoal {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
 .images {
   display: flex;
   width: 100%;
   padding: 1% 2% 0%;
   box-sizing:border-box;
   height: 50vh;
+  align-items: center;
+  position: relative;
+  top: -5vh;
 }
 
 .image {
   flex: 1;
   overflow: hidden;
-  transition: all .8s;
+  transition: all .6s;
   margin: 0 2%;
   box-shadow: 0.5vh 0.5vh 0.5vh rgba(128, 128, 128, 0.5);
   background-color: whitesmoke;
+  height: 100%;
+  position: relative;
+  border-radius: 1vh;
 }
 
-.image > img {
+.visible > img {
+  width: 80%;
+  height: 43vh;
+  object-fit: contain;
+}
+
+.image .visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: calc(100% - 50vh);
-  object-fit: cover;
-  transition: all .8s;
-  transform: scale(.9);
+  transition: all .6s;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.image > span {
+.image  span {
+  margin: 0 auto ;
+  width: fit-content;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 4.5vh;
   display: block;
-  text-align: center;
   /* 文字の高さを指定 */
-  line-height: 9;
+  transition: all .4s;
+  position: relative;
+  top: 20vh;
+  background: linear-gradient(transparent 85%,rgba(255, 165, 0, 0.3)20%);
+  z-index: 5;
+}
+
+#subtitle {
+  font-size: 3.5vh;
+  margin-top: 6.5vh;
 }
 
 .image:hover {
-  /* hover後の画像のサイズを指定 */
+  /* hover後のimageのサイズを指定 */
   flex: 1 30%;
+  height: 160%;
 }
 
-.image.image:hover > img {
-  width: 100%;
-  height: calc(100% - 0vh);
-  transform: scale(0.7);
+.image:hover  span {
+  top: 3vh;
 }
+
+.image:hover  .visible {
+  object-fit: contain;
+  opacity: 1;
+  visibility: visible;
+}
+
 
 /* #achivements------------------------------------------------------------------------ */
 #achievements {
@@ -370,6 +415,7 @@ div .gameArea {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -380,8 +426,10 @@ div #typingWord {
 }
 
 div #wordMeaning {
-  font-size: 3vh;
-  overflow-wrap: break-word;
+  width: 70%;
+  font-size: 3.5vh;
+  overflow-wrap: normal;
+  letter-spacing: 0.2vh;
 }
 
 #info {
@@ -398,4 +446,75 @@ div #wordMeaning {
 /* #nextsteps-------------------------------------------------------------------------- */
 #nextsteps {
   height: 100vh;
+  position: relative;
+}
+
+
+.thanks {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  /* visibility: hidden; */
+  /* position: absolute; */
+  /* bottom: 25vh; */
+}
+
+
+#gator {
+  width: 400px;
+  height: 70px;
+  background-color: rgba(0, 128, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#spread {
+  cursor: pointer;
+  font-size: 2.5vh;
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2vh);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fix {
+  width: 90vw;
+  text-align: center;
+  background-color: rgba(0, 0, 255, 0.7);
+  margin: 0 auto;
+}
+
+#message {
+  color: white;
+  font-size: 7.5vh;
+  letter-spacing: 0.5vh;
+  animation: sway 1.5s infinite ease-in-out;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item > h1 {
+  font-size: 5vh;
+}
+
+.item p {
+  margin-top: 1vh;
+  font-size: 3vh;
+  
 }

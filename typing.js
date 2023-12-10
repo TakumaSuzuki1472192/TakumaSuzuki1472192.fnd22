@@ -3,8 +3,8 @@
 // TYPING GAME--------------------------------------------------------------------
 // questions---------------------------------------------------------------------
 let questionsForJS = [
-  { word: 'Hyper Text Markup Language', meaning: 'ページのコンテンツを記載し定義する言語' },
-  { word: 'Cascading Style Sheet', meaning: 'ページの体裁や見栄えなどを指定する言語' },
+  { word: 'HTML', meaning: 'ページのコンテンツを記載し定義する言語' },
+  { word: 'CSS', meaning: 'ページの体裁や見栄えなどを指定する言語' },
   { word: 'JavaScript', meaning: 'ページのインタラクティブ性(相互作用)を担う言語' },
   { word: 'variable', meaning: '変数' },
   { word: 'identifier', meaning: '識別子:変数、関数、クラス、オブジェクトなどを一意に識別するために使用' },
@@ -134,59 +134,61 @@ let questionsForJS = [
   { word: 'substr', meaning: '文字列の部分取得' },
   { word: 'toUpperCase', meaning: '文字列を大文字に変換' },
   { word: 'toLowerCase', meaning: '文字列を小文字に変換' },
-  { word: 'Array.isArray', meaning: '引数が配列かどうかを判定' },
-  { word: 'Array.from', meaning: '配列風オブジェクトや反復可能オブジェクトから新しい配列インスタンスを生成' },
-  { word: 'Array.of', meaning: '引数の数と値から新しい配列インスタンスを生成' },
-  { word: 'Array.prototype.concat', meaning: '配列に他の配列や値を連結して新しい配列を生成' },
-  { word: 'Array.prototype.every', meaning: '配列内の全ての要素が指定した関数でチェックをパスするかどうかを判定' },
-  { word: 'Array.prototype.some', meaning: '配列内のいずれかの要素が指定した関数でチェックをパスするかどうかを判定' },
-  { word: 'Array.prototype.findIndex', meaning: '配列内の要素が指定した関数を満たす最初のインデックスを返す' },
-  { word: 'Array.prototype.includes', meaning: '配列が特定の要素を含むかどうかを判定' },
-  { word: 'Object.keys', meaning: '指定したオブジェクトの自身の列挙可能なプロパティの名前を配列として返す' },
+  { word: 'Object.keys', meaning: '指定したオブジェクトの自身の列挙可能なプロパティのキーを配列として返す' },
   { word: 'Object.values', meaning: '指定したオブジェクトの自身の列挙可能なプロパティの値を配列として返す' },
   { word: 'Object.entries', meaning: '指定したオブジェクトの自身の列挙可能なプロパティの[key, value]ペアの配列を返す' },
   { word: 'Object.assign', meaning: '一つ以上のソースオブジェクトから全ての列挙可能なプロパティをターゲットオブジェクトへコピー' },
   { word: 'Object.create', meaning: '指定したプロトタイプオブジェクトとプロパティを持つ新しいオブジェクトを生成' },
   { word: 'Object.freeze', meaning: 'オブジェクトを凍結' },
   { word: 'Object.seal', meaning: 'オブジェクトを封印' },
-  { word: 'Array.prototype.forEach', meaning: '配列の全ての要素に対して関数を実行' },
-  { word: 'Array.prototype.map', meaning: '配列の全ての要素に対して関数を実行し、その結果を新しい配列として生成' },
-  { word: 'Array.prototype.filter', meaning: '配列の要素のうち、指定した関数を満たす要素のみを新しい配列として生成' },
-  { word: 'Array.prototype.reduce', meaning: '配列の全ての要素に対して関数を左から右へと適用し、単一の出力値を生成' },
-  { word: 'Array.prototype.reduceRight', meaning: '配列の全ての要素に対して関数を右から左へと適用し、単一の出力値を生成' },
-  { word: 'Array.prototype.push', meaning: '配列の末尾に一つ以上の要素を追加し、新しい長さを返す' },
-  { word: 'Array.prototype.pop', meaning: '配列から最後の要素を取り除き、その要素を返す' },
-  { word: 'Array.prototype.shift', meaning: '配列から最初の要素を取り除き、その要素を返す' },
-  { word: 'Array.prototype.unshift', meaning: '配列の先頭に一つ以上の要素を追加し、新しい長さを返す' },
-  { word: 'Array.prototype.sort', meaning: '配列の要素を適切な位置にソートし、その配列を返す' },
-  { word: 'Array.prototype.reverse', meaning: '配列の要素の位置を反転させ、その配列を返す' },
-  { word: 'Array.prototype.splice', meaning: '配列の一部を取り除き、代わりに新たな要素を追加' },
-  { word: 'Array.prototype.slice', meaning: '配列の一部または全部を浅くコピーして新たな配列を作成' },
-  { word: 'Array.prototype.fill', meaning: '配列のすべてまたは一部の要素を静的な値で埋める' },
-  { word: 'Array.prototype.find', meaning: '配列内の要素が指定した関数を満たす最初の要素を返す' },
-  { word: 'Array.prototype.copyWithin', meaning: '配列内の要素を同じ配列内の別の位置にコピーし、その配列を変更' },
-  { word: 'Array.prototype.flat', meaning: '全てのサブ配列要素を親配列に結合して新しい配列を生成' },
-  { word: 'Array.prototype.flatMap', meaning: '配列の全ての要素に関数を適用し、結果として得られる配列を新しい配列に結合' },
-  { word: 'Array.prototype.toString', meaning: '配列の要素を文字列に変換し、それらをカンマで結合した新しい文字列を返す' },
-  { word: 'Array.prototype.toLocaleString', meaning: '配列の要素を文字列に変換し、それらをロケールに適した表現で結合した新しい文字列を返す' },
-  { word: 'Array.prototype.indexOf', meaning: '配列で指定された要素を見つけるために使用され、その最初のインデックスを返し、存在しない場合は-1を返す' },
-  { word: 'Array.prototype.lastIndexOf', meaning: '配列で指定された要素を見つけるために使用され、その最後のインデックスを返し、存在しない場合は-1を返す' },
-  { word: 'Object.prototype.hasOwnProperty', meaning: 'オブジェクトが指定したプロパティを自身の直接のプロパティとして持っているかどうかを判定' },
-  { word: 'Object.prototype.isPrototypeOf', meaning: '指定したオブジェクトが現在のオブジェクトのプロトタイプチェーンに存在するかどうかを判定' },
-  { word: 'Object.prototype.propertyIsEnumerable', meaning: '指定したプロパティが列挙可能かどうかを判定' },
-  { word: 'Object.prototype.toString', meaning: 'オブジェクトを文字列に変換' },
-  { word: 'Object.prototype.valueOf', meaning: 'オブジェクトのプリミティブ値を返す' },
-  { word: 'Object.prototype.toLocaleString', meaning: 'オブジェクトを文字列に変換し、それをロケールに適した表現で返す' },
-  { word: 'Date.prototype.getDate', meaning: '指定した日付の日の部分を返す' },
-  { word: 'Date.prototype.getDay', meaning: '指定した日付の曜日を返す' },
-  { word: 'Date.prototype.getFullYear', meaning: '指定した日付の年を返す' },
-  { word: 'Date.prototype.getHours', meaning: '指定した日付の時間を返す' },
-  { word: 'Date.prototype.getMilliseconds', meaning: '指定した日付のミリ秒を返す' },
-  { word: 'Date.prototype.getMinutes', meaning: '指定した日付の分を返す' },
-  { word: 'Date.prototype.getMonth', meaning: '指定した日付の月を返す' },
-  { word: 'Date.prototype.getSeconds', meaning: '指定した日付の秒を返す' },
-  { word: 'Date.prototype.getTime', meaning: '1970年1月1日 00:00:00 UTCから指定した日付までのミリ秒を返す' },
-  { word: 'Date.prototype.getTimezoneOffset', meaning: 'UTCとローカル時間との差を分で返す' },
+  { word: 'Object.hasOwnProperty', meaning: 'オブジェクトが指定したプロパティを自身の直接のプロパティとして持っているかどうかを判定(.prototype)' },
+  { word: 'Object.isPrototypeOf', meaning: '指定したオブジェクトが現在のオブジェクトのプロトタイプチェーンに存在するかどうかを判定(.prototype)' },
+  { word: 'Object.propertyIsEnumerable', meaning: '指定したプロパティが列挙可能かどうかを判定(.prototype)' },
+  { word: 'Object.toString', meaning: 'オブジェクトを文字列に変換(.prototype)' },
+  { word: 'Object.valueOf', meaning: 'オブジェクトのプリミティブ値を返す(.prototype)' },
+  { word: 'Object.toLocaleString', meaning: 'オブジェクトを文字列に変換し、それをロケールに適した表現で返す(.prototype)' },
+  { word: 'array.isArray', meaning: '引数が配列かどうかを判定' },
+  { word: 'array.from', meaning: '配列風オブジェクトや反復可能オブジェクトから新しい配列インスタンスを生成' },
+  { word: 'array.of', meaning: '引数の数と値から新しい配列インスタンスを生成' },
+  { word: 'array.concat', meaning: '配列に他の配列や値を連結して新しい配列を生成(.prototype)' },
+  { word: 'array.every', meaning: '配列内の全ての要素が指定した関数でチェックをパスするかどうかを判定(.prototype)' },
+  { word: 'array.some', meaning: '配列内のいずれかの要素が指定した関数でチェックをパスするかどうかを判定(.prototype)' },
+  { word: 'array.findIndex', meaning: '配列内の要素が指定した関数を満たす最初のインデックスを返す(.prototype)' },
+  { word: 'array.includes', meaning: '配列が特定の要素を含むかどうかを判定(.prototype)' },
+  { word: 'array.forEach', meaning: '配列の全ての要素に対して関数を実行(.prototype)' },
+  { word: 'array.map', meaning: '配列の全ての要素に対して関数を実行し、その結果を新しい配列として生成(.prototype)' },
+  { word: 'array.filter', meaning: '配列の要素のうち、指定した関数を満たす要素のみを新しい配列として生成(.prototype)' },
+  { word: 'array.reduce', meaning: '配列の全ての要素に対して関数を左から右へと適用し、単一の出力値を生成(.prototype)' },
+  { word: 'array.reduceRight', meaning: '配列の全ての要素に対して関数を右から左へと適用し、単一の出力値を生成(.prototype)' },
+  { word: 'array.push', meaning: '配列の末尾に一つ以上の要素を追加し、新しい長さを返す(.prototype)' },
+  { word: 'array.pop', meaning: '配列から最後の要素を取り除き、その要素を返す(.prototype)' },
+  { word: 'array.shift', meaning: '配列から最初の要素を取り除き、その要素を返す(.prototype)' },
+  { word: 'array.unshift', meaning: '配列の先頭に一つ以上の要素を追加し、新しい長さを返す(.prototype)' },
+  { word: 'array.sort', meaning: '配列の要素を適切な位置にソートし、その配列を返す(.prototype)' },
+  { word: 'array.reverse', meaning: '配列の要素の位置を反転させ、その配列を返す(.prototype)' },
+  { word: 'array.splice', meaning: '配列の一部を取り除き、代わりに新たな要素を追加(.prototype)' },
+  { word: 'array.slice', meaning: '配列の一部または全部を浅くコピーして新たな配列を作成(.prototype)' },
+  { word: 'array.fill', meaning: '配列のすべてまたは一部の要素を静的な値で埋める(.prototype)' },
+  { word: 'array.find', meaning: '配列内の要素が指定した関数を満たす最初の要素を返す(.prototype)' },
+  { word: 'array.copyWithin', meaning: '配列内の要素を同じ配列内の別の位置にコピーし、その配列を変更(.prototype)' },
+  { word: 'array.flat', meaning: '全てのサブ配列要素を親配列に結合して新しい配列を生成(.prototype)' },
+  { word: 'array.flatMap', meaning: '配列の全ての要素に関数を適用し、結果として得られる配列を新しい配列に結合(.prototype)' },
+  { word: 'array.toString', meaning: '配列の要素を文字列に変換し、それらをカンマで結合した新しい文字列を返す(.prototype)' },
+  { word: 'array.toLocaleString', meaning: '配列の要素を文字列に変換し、それらをロケールに適した表現で結合した新しい文字列を返す(.prototype)' },
+  { word: 'array.indexOf', meaning: '配列で指定された要素を見つけるために使用され、その最初のインデックスを返し、存在しない場合は-1を返す(.prototype)' },
+  { word: 'array.lastIndexOf', meaning: '配列で指定された要素を見つけるために使用され、その最後のインデックスを返し、存在しない場合は-1を返す(.prototype)' },
+  { word: 'array.concat', meaning: '既存の配列に他の配列や値を連結し、新しい配列を生成する(.prototype)' },
+  { word: 'array.entries', meaning: '配列のイテレータオブジェクトを返す(.prototype)' },
+  { word: 'Date.getDate', meaning: '指定した日付の日の部分を返す(.prototype)' },
+  { word: 'Date.getDay', meaning: '指定した日付の曜日を返す(.prototype)' },
+  { word: 'Date.getFullYear', meaning: '指定した日付の年を返す(.prototype)' },
+  { word: 'Date.getHours', meaning: '指定した日付の時間を返す(.prototype)' },
+  { word: 'Date.getMilliseconds', meaning: '指定した日付のミリ秒を返す(.prototype)' },
+  { word: 'Date.getMinutes', meaning: '指定した日付の分を返す(.prototype)' },
+  { word: 'Date.getMonth', meaning: '指定した日付の月を返す(.prototype)' },
+  { word: 'Date.getSeconds', meaning: '指定した日付の秒を返す(.prototype)' },
+  { word: 'Date.getTime', meaning: '1970年1月1日 00:00:00 UTCから指定した日付までのミリ秒を返す(.prototype)' },
+  { word: 'Date.getTimezoneOffset', meaning: 'UTCとローカル時間との差を分で返す(.prototype)' },
   // { word: 'Date.prototype.getUTCDate', meaning: '指定した日付の日をUTCで返す' },
   // { word: 'Date.prototype.getUTCDay', meaning: '指定した日付の曜日をUTCで返す' },
   // { word: 'Date.prototype.getUTCFullYear', meaning: '指定した日付の年をUTCで返す' },
@@ -195,14 +197,14 @@ let questionsForJS = [
   // { word: 'Date.prototype.getUTCMinutes', meaning: '指定した日付の分をUTCで返す' },
   // { word: 'Date.prototype.getUTCMonth', meaning: '指定した日付の月をUTCで返す' },
   // { word: 'Date.prototype.getUTCSeconds', meaning: '指定した日付の秒をUTCで返す' },
-  { word: 'Date.prototype.setDate', meaning: '指定した日付の日を設定する' },
-  { word: 'Date.prototype.setFullYear', meaning: '指定した日付の年を設定する' },
-  { word: 'Date.prototype.setHours', meaning: '指定した日付の時間を設定する' },
-  { word: 'Date.prototype.setMilliseconds', meaning: '指定した日付のミリ秒を設定する' },
-  { word: 'Date.prototype.setMinutes', meaning: '指定した日付の分を設定する' },
-  { word: 'Date.prototype.setMonth', meaning: '指定した日付の月を設定する' },
-  { word: 'Date.prototype.setSeconds', meaning: '指定した日付の秒を設定する' },
-  { word: 'Date.prototype.setTime', meaning: '指定した日付を1970年1月1日 00:00:00 UTCからのミリ秒で設定する' },
+  { word: 'Date.setDate', meaning: '指定した日付の日を設定する(.prototype)' },
+  { word: 'Date.setFullYear', meaning: '指定した日付の年を設定する(.prototype)' },
+  { word: 'Date.setHours', meaning: '指定した日付の時間を設定する(.prototype)' },
+  { word: 'Date.setMilliseconds', meaning: '指定した日付のミリ秒を設定する(.prototype)' },
+  { word: 'Date.setMinutes', meaning: '指定した日付の分を設定する(.prototype)' },
+  { word: 'Date.setMonth', meaning: '指定した日付の月を設定する(.prototype)' },
+  { word: 'Date.setSeconds', meaning: '指定した日付の秒を設定する(.prototype)' },
+  { word: 'Date.setTime', meaning: '指定した日付を1970年1月1日 00:00:00 UTCからのミリ秒で設定する(.prototype)' },
   // { word: 'Date.prototype.setUTCDate', meaning: '指定した日付の日をUTCで設定する' },
   // { word: 'Date.prototype.setUTCFullYear', meaning: '指定した日付の年をUTCで設定する' },
   // { word: 'Date.prototype.setUTCHours', meaning: '指定した日付の時間をUTCで設定する' },
@@ -210,23 +212,21 @@ let questionsForJS = [
   // { word: 'Date.prototype.setUTCMinutes', meaning: '指定した日付の分をUTCで設定する' },
   // { word: 'Date.prototype.setUTCMonth', meaning: '指定した日付の月をUTCで設定する' },
   // { word: 'Date.prototype.setUTCSeconds', meaning: '指定した日付の秒をUTCで設定する' },
-  { word: 'Date.prototype.toDateString', meaning: '日付部分を人間が読める形式の文字列で返す' },
-  { word: 'Date.prototype.toISOString', meaning: '日付をISO 8601形式の文字列で返す' },
-  { word: 'Date.prototype.toJSON', meaning: '日付をJSON形式で表現する文字列を返す' },
-  { word: 'Date.prototype.toLocaleDateString', meaning: '日付部分をロケールに適した形式の文字列で返す' },
-  { word: 'Date.prototype.toLocaleTimeString', meaning: '時間部分をロケールに適した形式の文字列で返す' },
-  { word: 'Date.prototype.toString', meaning: '日付を人間が読める形式の文字列で返す' },
-  { word: 'Date.prototype.toTimeString', meaning: '時間部分を人間が読める形式の文字列で返す' },
+  { word: 'Date.toDateString', meaning: '日付部分を人間が読める形式の文字列で返す(.prototype)' },
+  { word: 'Date.toISOString', meaning: '日付をISO 8601形式の文字列で返す(.prototype)' },
+  { word: 'Date.toJSON', meaning: '日付をJSON形式で表現する文字列を返す(.prototype)' },
+  { word: 'Date.toLocaleDateString', meaning: '日付部分をロケールに適した形式の文字列で返す(.prototype)' },
+  { word: 'Date.toLocaleTimeString', meaning: '時間部分をロケールに適した形式の文字列で返す(.prototype)' },
+  { word: 'Date.toString', meaning: '日付を人間が読める形式の文字列で返す(.prototype)' },
+  { word: 'Date.toTimeString', meaning: '時間部分を人間が読める形式の文字列で返す(.prototype)' },
   // { word: 'Date.prototype.toUTCString', meaning: '日付をUTC形式の文字列で返す' },
-  { word: 'Date.prototype.valueOf', meaning: '日付のプリミティブ値を返す' },
-  { word: 'Function.prototype.apply', meaning: '指定したthis値と配列（または配列風オブジェクト）を引数として関数を呼び出す' },
-  { word: 'Function.prototype.bind', meaning: '新しい関数を生成し、その関数内部のthis値を指定した値にバインドする' },
-  { word: 'Function.prototype.call', meaning: '指定したthis値と引数を使って関数を呼び出す' },
-  { word: 'Function.prototype.toString', meaning: '関数のソースコードを表す文字列を返す' },
-  { word: 'Function.prototype.name', meaning: '関数の名前を返す' },
-  { word: 'Function.prototype.length', meaning: '関数が期待する引数の数を返す' },
-  { word: 'Array.prototype.concat', meaning: '既存の配列に他の配列や値を連結し、新しい配列を生成する' },
-  { word: 'Array.prototype.entries', meaning: '配列のイテレータオブジェクトを返す' },
+  { word: 'Date.valueOf', meaning: '日付のプリミティブ値を返す(.prototype)' },
+  { word: 'Function.apply', meaning: '指定したthis値と配列（または配列風オブジェクト）を引数として関数を呼び出す(.prototype)' },
+  { word: 'Function.bind', meaning: '新しい関数を生成し、その関数内部のthis値を指定した値にバインドする(.prototype)' },
+  { word: 'Function.call', meaning: '指定したthis値と引数を使って関数を呼び出す(.prototype)' },
+  { word: 'Function.toString', meaning: '関数のソースコードを表す文字列を返す(.prototype)' },
+  { word: 'Function.name', meaning: '関数の名前を返す(.prototype)' },
+  { word: 'Function.length', meaning: '関数が期待する引数の数を返す(.prototype)' },
   { word: 'EvalError', meaning: 'eval() 関数の使用時にエラーが発生した' },
   { word: 'URIError', meaning: 'encodeURI() や decodeURI() 関数で無効なURIが使用された' },
   { word: 'TypeError', meaning: '型が予想される操作が無効な型で実行された' },
@@ -235,13 +235,6 @@ let questionsForJS = [
   { word: 'RangeError', meaning: '数値が有効な範囲外にある' }
 ];
 // --------------------------------------------------------------------------------------
-
-document.addEventListener("keydown", pageMoveLock); //スペースキーによるスクロールを無効にする
-function pageMoveLock(event) {
-  if (event.keyCode === 32) {
-    event.preventDefault();
-  }
-}
 
 
 let randomIndex;
@@ -268,7 +261,10 @@ const timeLeftLabel = document.getElementById('timeLeft');
 const accuracyLabel = document.getElementById('accuracy');
 const typeSpeedLabel = document.getElementById('typeSpeed');
 
-typingWord.addEventListener("click", () => {  //ボタンを押したら開始にしたい
+
+// ゲーム開始---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+typingWord.addEventListener("click", () => {  //ボタンを押したら開始
   if (startFlag === true) {
     return;
   }
@@ -290,7 +286,19 @@ typingWord.addEventListener("click", () => {  //ボタンを押したら開始�
   updateTimeLimit();
 });
 
-function updateTimeLimit() {
+
+document.addEventListener("keydown", pageMoveLock); //ブラウザのスペースキーによるスクロールを無効にする
+function pageMoveLock(event) {
+  if (event.keyCode === 32) {
+    event.preventDefault();
+  }
+}
+
+
+// ゲーム関数---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+function updateTimeLimit() {    //時間カウント関数
   const timer = startTime + timeLimit - Date.now();
   timeLeftLabel.textContent = (timer / 1000).toFixed(1);
 
@@ -320,6 +328,8 @@ function updateTypingWord() {
   }
   typingWord.textContent = update + word.substring(loc);
 }
+
+// ゲーム中------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 window.addEventListener("keydown", e => {
   if (startFlag === false) {

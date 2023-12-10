@@ -47,3 +47,15 @@ indicator.addEventListener("click", (event) => {
   }
 });
 
+
+// 4P目---------------------------------------------------------------------
+const btn = document.getElementById("spread");
+const message = document.getElementById("message");
+const hoverthanks = document.getElementsByClassName("thanks");
+const thanks = "🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊<br>🐊🐊Thank you to everyone in FND22🐊🐊<br>🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊🐊";
+
+btn.addEventListener("click",() => message.innerHTML = thanks);
+hoverthanks[0].addEventListener("mouseover",() => hoverthanks.backgroundColor = "blue");
+btn.addEventListener("mouseover",() => btn.backgroundColor = "rgb(255, 255, 255)");
+
+
