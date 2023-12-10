@@ -455,7 +455,6 @@ div #wordMeaning {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10vh;
   /* visibility: hidden; */
   /* position: absolute; */
   /* bottom: 25vh; */
@@ -470,6 +469,7 @@ div #wordMeaning {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 5vh;
 }
 
 #spread {
@@ -503,18 +503,34 @@ div #wordMeaning {
   animation: sway 1.5s infinite ease-in-out;
 }
 
-.item {
+
+.images2 {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  padding: 1% 2% 0%;
+  box-sizing:border-box;
+  justify-content: space-around;
+  height: vh;
   align-items: center;
+  position: relative;
 }
 
-.item > h1 {
-  font-size: 5vh;
+.img2 {
+  width: 27%;
+  object-fit: cover;
 }
+
+.img2 > img {
+  max-width: 100%;
+  box-shadow: 0.5vh 0.5vh 0.5vh rgba(128, 128, 128, 0.5);
+  border-radius: 2vh;
+}
+
 
 .item p {
-  margin-top: 1vh;
-  font-size: 3vh;
-  
+  text-align: center;
+  font-size: 2.5vh;
+  background-color:rgba(255, 255, 255, 0.5);
+  margin-bottom: 1vh;
+  border-radius: 5px;
 }
